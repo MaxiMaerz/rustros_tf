@@ -129,7 +129,7 @@ mod test {
             translation: Vector3{x: 2f64, y: 2f64, z: 0f64},
             rotation: Quaternion{x: 0f64, y: 0f64, z: 0f64, w: 1f64}
         };
-        let transform_chain = vec!(tf1, tf1);
+        let transform_chain = vec!(tf1.clone(), tf1);
         let res = chain_transforms(&transform_chain);
         assert_eq!(res, expected_tf);
     }
